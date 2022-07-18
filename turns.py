@@ -32,7 +32,12 @@ def turns(player_turn):
         print("Player two turn:")
         place_mark(player_turn)
 turn = 1
+turn_counter = 0
 while True:
+    turn_counter += 1
+    if turn_counter == 10:
+        print("Draw!!")
+        break
     if turn > 0:
         turns('X')
         turn = turn * -1
